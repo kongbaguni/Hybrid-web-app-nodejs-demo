@@ -104,12 +104,15 @@ article a, article a:visited {
     padding:10px;
 }
 
-#scanOutput article > a {
-    display:block;
+#scanOutput footer > a {
+    display:inline-block;
     text-align:right;
     background-color:black;
+    border:1px solid #fff;
+    border-radius:10px;
     color:white;
     padding:10px;
+    margin:10px;
     text-decoration:none;
 }
 
@@ -119,9 +122,14 @@ article a, article a:visited {
     font-style:bold;
 }
 
-#ttsTextInput {
-    display:block;
+#ttsTextInputForm {
     background:#333;
-    border:1px solid white;
-    color:white;
+    border:1px dotted white;
+    padding:5px;
+}
+
+#ttsTextInputForm input {
+    border:1px solid #fff;
+    background: black;
+    color: white;
 }

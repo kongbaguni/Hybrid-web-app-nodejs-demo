@@ -144,6 +144,9 @@ function sendScanedDocument(uuid,base64,time,delBtnTitle,regTimeTitle) {
         scan.insertBefore(article, scan.childNodes[0]);
     }
     
+    var footer = document.createElement("footer");
+    article.appendChild(footer);
+    
     var viewBtn = document.createElement("a");
     viewBtn.href = "#";
     viewBtn.innerText = "view"
@@ -151,7 +154,7 @@ function sendScanedDocument(uuid,base64,time,delBtnTitle,regTimeTitle) {
         showImageDetail(uuid);
         return false;
     };
-    article.appendChild(viewBtn);
+    footer.appendChild(viewBtn);
     
     var ocrBtn = document.createElement("a");
     ocrBtn.href = "#";
@@ -160,7 +163,7 @@ function sendScanedDocument(uuid,base64,time,delBtnTitle,regTimeTitle) {
         showOCR(uuid);
         return false;
     };
-    article.appendChild(ocrBtn);
+    footer.appendChild(ocrBtn);
     
     var delBtn = document.createElement("a");
     delBtn.class = "remove";
@@ -170,7 +173,7 @@ function sendScanedDocument(uuid,base64,time,delBtnTitle,regTimeTitle) {
     };
     delBtn.innerText = delBtnTitle;
     delBtn.href = "#";
-    article.appendChild(delBtn);
+    footer.appendChild(delBtn);
 }
 
 function pictureToggle(id,isShow) {

@@ -1,60 +1,65 @@
 <!DOCUTYPE HTML>
 <html>
-<head>
-    <meta charset="UTF-8" />
-    <title>test page</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" type = "text/css" href="style.css" />
-    <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
-    <script type="text/javascript" charset="UTF-8" src = "java.js"> </script>
+    <head>
+        <meta charset="UTF-8" />
+        <title>test page</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" type = "text/css" href="style.css" />
+        <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+        <script type="text/javascript" charset="UTF-8" src = "java.js"> </script>
+        
+    </head>
+    <body>
+        
+        <article>
+            <header>
+                <h1 id = "appName">Document Scanner</h1>
+            </header>
+            <p id = "appDesc"> <em>문서 스켄</em> 테스트 프로젝트 입니다. </p>
+            <p>
+            <a href="#scanInput" onclick="speech_text('안녕하세요. 문서 스캐너 테스트 앱 입니다.');return false;">TTS test</a><br />
+            <a href="#" onclick = "toast('toast test입니다');return false;">toast test</a>
+            
+            </p>
+            <form id = "ttsTextInputForm" action="javascript:ttsTest();">
+                <p>
+                ttsTest
+                </p>
+                <p>
+                <input type = "text" name = "text" id = "ttsTextInput" placeholder = "TTS 테스트 문장을 입력" />
+                <input type = "submit" value = "확인" />
+                </p>
+            </form>
+            <p> <a href="#" onclick="alertPopup('알림','hello world');return false;"> hello world</a></p>
+            <p id = "scanInput">
+            <a href="#scanInput" onclick="speech_text('스캔을 시작합니다.');
+                ;callDocumentScanner();return false;">scan</a>
+            </p>
+            <p id = "remove">
+            <a href="#remove" onclick="resetPictures();return false;">reset Pictures</a>
+            </p>
+        </article>
+        
+        <div id = "scanOutput">
+            
+        </div>
+        
+        
+    </body>
     
-</head>
-<body>
-
-<article>
-    <header>
-        <h1 id = "appName">Document Scanner</h1>
-    </header>
-    <p id = "appDesc"> <em>문서 스켄</em> 테스트 프로젝트 입니다. </p>
-    <p>
-    <a href="#scanInput" onclick="speech_text('안녕하세요. 문서 스캐너 테스트 앱 입니다.');return false;">TTS test</a><br />
-    <a href="#" onclick = "toast('toast test입니다');return false;">toast test</a>
+    <script type="text/javascript">
+        //    var hello1 = function(){
+        //        var h = document.getElementById("appName");
+        //        speech_text(h.innerText);
+        //    }
+        //    var hello2 = function(){
+        //        var p = document.getElementById("appDesc");
+        //        speech_text(p.innerText);
+        //    }
+        //    setTimeout(hello1,100);
+        //    setTimeout(hello2,7000);
+        </script>
     
-    </p>
-    <form action="javascript:ttsTest();">
-	    <input id = "ttsTextInput" type="text" />
- 	    <input type = "submit" />
-    </form>
-    <p> <a href="#" onclick="alertPopup('알림','hello world');return false;"> hello world</a></p>
-    <p id = "scanInput">
-        <a href="#scanInput" onclick="speech_text('스캔을 시작합니다.');
-            ;callDocumentScanner();return false;">scan</a>
-    </p>
-    <p id = "remove">
-        <a href="#remove" onclick="resetPictures();return false;">reset Pictures</a>
-    </p>
-</article>
-
-<div id = "scanOutput">
-
-</div>
-
-
-</body>
-
-<script type="text/javascript">
-//    var hello1 = function(){
-//        var h = document.getElementById("appName");
-//        speech_text(h.innerText);
-//    }
-//    var hello2 = function(){
-//        var p = document.getElementById("appDesc");
-//        speech_text(p.innerText);
-//    }
-//    setTimeout(hello1,100);
-//    setTimeout(hello2,7000);
-</script>
-
 </html>
 
 
