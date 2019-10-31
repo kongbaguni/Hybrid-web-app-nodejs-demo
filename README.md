@@ -64,6 +64,7 @@ function speech_text(text) {
     };
     sendMessage(message);
 }
+
 function ttsDidComplete(isSucess) {
 // callback 
 }
