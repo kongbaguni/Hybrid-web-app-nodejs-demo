@@ -1,4 +1,6 @@
 # javascript 에서 native 로 메세지 전달
+
+
 interfacename : **jsInterface**
 ### json 형식
 ```json
@@ -137,3 +139,16 @@ self.webView.evaluateJavaScript(js) { (_, error) in
 val js = "javascript:sendResult('test');"
 mWebView?.loadUrl(js)
 ```
+
+
+# 인터페이스 문서 작성 예
+
+### tts
+```json
+{
+	"action" : "tts", 
+	"text" : "[value]" , 
+	"callback": "ttsDidComplete"
+}
+```
+callback 매개변수 : "true" or "false"
