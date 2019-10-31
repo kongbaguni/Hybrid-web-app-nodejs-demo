@@ -211,11 +211,15 @@ var count = 0
 function speech_text(text) {
     var message = {
         "action" : "tts",
-        "text" : text
+        "text" : text,
+        "callback" : "ttsDidComplete"
     };
     sendMessage(message);
 }
 
+function ttsDidComplete(isSucess) {
+    toast("speach "+isSucess);
+}
 /**
  * 음성 읽기 진행상태 queue에 읽을 객체가 남아 있으면 true, 아니면 false 리턴
  */
@@ -230,7 +234,7 @@ function ttsSpeaking(){
 function toast(message) {
     var message = {
         "action" : "toast",
-        "message" : message
+        "message" : message,
     };
     sendMessage(message);
 }
@@ -239,3 +243,4 @@ function ttsTest() {
     var value = $("input#ttsTextInput").val();
     speech_text(value);
 }
+
