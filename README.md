@@ -123,16 +123,16 @@ class JsInterface {
 
 # native에서 JS 실행
 native 단의 기능 실행에 대한 콜백으로 결과값을 받아올 필요가 있을 때 사용합니다.
-javaScript 펀션을 native 단에서 직접 실행하므로, 매게변수로 값을 전달 받도록 구현하면 됩니다.
-
-## iOS : swift
+javaScript 펀션을 native 단에서 직접 실행합니다. 
+매개변수로 값을 전달 받도록 구현하면 됩니다.
+## 예제 iOS : swift
 ```swift
 let js = "sendResult('test');"
 self.webView.evaluateJavaScript(js) { (_, error) in
     debugPrint(error?.localizedDescription ?? "에러없음")
 }
 ```
-## Android : kotlin
+## 예제 Android : kotlin
 ```kotlin
 val js = "javascript:sendResult('test');"
 mWebView?.loadUrl(js)
