@@ -143,6 +143,9 @@ mWebView?.loadUrl(js)
 
 
 # 인터페이스 정의
+JSON : js -> native
+js : navite -> js
+
 ### 자동로그인, 페턴 라인 숨기기 등 설정값 전달 (웹뷰 로드시 실행)
 ```javascript
 loadSettingValue(isAutoLoginMode,isPatternLineHideMode);
