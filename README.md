@@ -142,18 +142,57 @@ mWebView?.loadUrl(js)
 ```
 
 
-# 인터페이스 문서 작성 예
+# 인터페이스 정의
+### 자동로그인, 페턴 라인 숨기기 등 설정값 전달 (웹뷰 로드시 실행)
+```javascript
+loadSettingValue(isAutoLoginMode,isPatternLineHideMode);
+```
 
-### tts
+### logout 로그아웃 처리.
 ```json
 {
-	"action" : "tts", 
-	"text" : "[value]" , 
-	"callback": "ttsDidComplete"
+	"action":"logout",
 }
 ```
-callback 매개변수 : "true" or "false"
 
+### changePatternPinNumber // 페턴번호 변경 호출
+```json
+{
+	"action":"changePatternPinNumber"
+}
+```
+
+### changeSimplePinNumber // 간편비밀번호 변경 호출
+```json
+{
+	"action":"changeSimplePinNumber"
+}
+```
+
+### toggleAutoLogin // 자동 로그인 설정 변경
+```json
+{
+	"action":"toggleAutoLogin"
+}
+```
+
+### toggleHidePatternLineMode // 페턴 라인 숨기기 모드 설정 변경
+```json
+{
+	"action":"toggleHidePatternLineMode"
+}
+```
+
+### showTransKeyPad // 보안 키패드 호출
+```json
+{
+	"action" : "showTransKeyPad"
+}
+```
+#### callback (키패드 입력시, 입력 완료시 호출됨.)
+```javascript
+resultTransKeyPad(result,isDone);
+```
 
 [Hybrid-web-app-android-demo](https://github.com/kongbaguni/Hybrid-web-app-android-demo)
 
