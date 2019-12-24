@@ -159,7 +159,7 @@ setDeviceInfo(json)
 {
 	"pushId" : " ",
 	"uuid" : " ",
-	"mchyyModel" : " ",
+	"mchyModel" : " ",
 	"ctfcMthDcd" : "PIN or PATTERN",
 	"rgstStesDcd" : "PIN or PIN,PATTERN",
 	"autoLogin" : "Y or N",
