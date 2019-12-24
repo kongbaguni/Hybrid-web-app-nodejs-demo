@@ -160,8 +160,8 @@ setDeviceInfo(json)
 	"pushId" : " ",
 	"uuid" : " ",
 	"mchyyModel" : " ",
-	"ctfcMthDcd" : "pin" or "pattern",
-	"rgstStesDcd" : "pin" or "pin,pattern",		
+	"ctfcMthDcd" : "pin or pattern",
+	"rgstStesDcd" : "pin or pin,pattern",		
 }
 ```
 
