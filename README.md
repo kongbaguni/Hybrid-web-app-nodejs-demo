@@ -160,15 +160,11 @@ setDeviceInfo(json)
 	"pushId" : " ",
 	"uuid" : " ",
 	"mchyyModel" : " ",
-	"ctfcMthDcd" : "pin or pattern",
-	"rgstStesDcd" : "pin or pin,pattern",		
+	"ctfcMthDcd" : "PIN or PATTERN",
+	"rgstStesDcd" : "PIN or PIN,PATTERN",
+	"autoLogin" : "Y or N",
+	"patternHide" : "Y or N"
 }
-```
-
-## loadSettingValue // 자동로그인, 페턴 라인 숨기기 등 설정값 전달. 웹뷰 로드시 실행
-### js->native
-```javascript
-loadSettingValue(isAutoLoginMode,isPatternLineHideMode);
 ```
 
 ## logout // 로그아웃. 로컬DB(핀번호,자동로그인 설정등) 초기화후 초기화면으로 이동.
