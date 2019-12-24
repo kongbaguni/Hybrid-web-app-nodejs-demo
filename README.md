@@ -143,56 +143,83 @@ mWebView?.loadUrl(js)
 
 
 # 인터페이스 정의
-#### JSON : js -> native
-#### js : navite -> js
+## deviceInfo
+### js -> native 
+```json
+{ 
+	"action" : "getDeviceInfo"
+}
+```
 
-### loadSettingValue // 자동로그인, 페턴 라인 숨기기 등 설정값 전달. 웹뷰 로드시 실행
+### native -> js
+```javascript
+setDeviceInfo(json)
+```
+```json
+{
+	"pushId" : " ",
+	"uuid" : " ",
+	"mchyyModel" : " ",
+	"ctfcMthDcd" : "pin" or "pattern",
+	"rgstStesDcd" : "pin" or "pin,pattern",		
+}
+```
+
+## loadSettingValue // 자동로그인, 페턴 라인 숨기기 등 설정값 전달. 웹뷰 로드시 실행
+### js->native
 ```javascript
 loadSettingValue(isAutoLoginMode,isPatternLineHideMode);
 ```
 
-### logout // 로그아웃. 로컬DB(핀번호,자동로그인 설정등) 초기화후 초기화면으로 이동.
+## logout // 로그아웃. 로컬DB(핀번호,자동로그인 설정등) 초기화후 초기화면으로 이동.
+### js->native
 ```json
 {
 	"action":"logout",
 }
 ```
 
-### changePatternPinNumber // 페턴번호 변경 호출
+## changePatternPinNumber // 페턴번호 변경 호출
+### js->native
 ```json
 {
 	"action":"changePatternPinNumber"
 }
 ```
 
-### changeSimplePinNumber // 간편비밀번호 변경 호출
+## changeSimplePinNumber // 간편비밀번호 변경 호출
+### js->native
 ```json
 {
 	"action":"changeSimplePinNumber"
 }
 ```
 
-### toggleAutoLogin // 자동 로그인 설정 변경
+## toggleAutoLogin // 자동 로그인 설정 변경
+### js->native
 ```json
 {
 	"action":"toggleAutoLogin"
 }
 ```
 
-### toggleHidePatternLineMode // 페턴 라인 숨기기 모드 설정 변경
+## toggleHidePatternLineMode // 페턴 라인 숨기기 모드 설정 변경
+### js->native
 ```json
 {
 	"action":"toggleHidePatternLineMode"
 }
 ```
 
-### showTransKeyPad // 보안 키패드 호출
+## showTransKeyPad // 보안 키패드 호출
+### js->native
 ```json
 {
 	"action" : "showTransKeyPad"
 }
 ```
-#### callback // 키패드 입력시, 입력 완료시 호출됨.
+## callback // 키패드 입력시, 입력 완료시 호출됨.
+### js->native
 ```javascript
 resultTransKeyPad(result,isDone);
 ```
