@@ -175,6 +175,15 @@ setDeviceInfo(json)
 }
 ```
 
+## 전화하기
+### js->native
+```json
+{
+	"action":"phoneCall",
+	"number":"010-0000-0000"
+}
+```
+
 ## changePatternPinNumber // 페턴번호 변경 호출
 ### js->native
 ```json
