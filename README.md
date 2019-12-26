@@ -223,8 +223,8 @@ setDeviceInfo(json)
 	"action" : "showTransKeyPad"
 }
 ```
-## callback // 키패드 입력시, 입력 완료시 호출됨.
-### js->native
+### native->js 
+키패드 입력시 호출됩니다. 입력중에는 * 만 입력되고, 키패드의 확인 버튼을 누른 시점에서 입력된 문자열의 전체가 넘어갑니다.
 ```javascript
 resultTransKeyPad(result,isDone);
 ```
